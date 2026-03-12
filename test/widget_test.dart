@@ -11,20 +11,17 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:cartao_visita/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Cartão de Visita renderiza', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(CartaoVisita());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verifica se o nome aparece na tela
+    expect(find.text('Seu Nome Completo'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Verifica se o título aparece na tela
+    expect(find.text('Título Profissional'), findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verifica se o email aparece na tela
+    expect(find.text('email@exemplo.com'), findsOneWidget);
   });
 }
