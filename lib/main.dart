@@ -8,7 +8,7 @@ void main() {
 class CartaoVisita extends StatelessWidget {
   // Função para abrir o GitHub
   void _abrirGitHub() async {
-    const url = 'https://github.com/MatheusSosterSenac/Lista-de-exercicios-DART'; // substitua pelo seu GitHub
+    const url = 'https://github.com/MatheusSosterSenac/cartao_visita'; // substitua pelo seu GitHub
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url));
     } else {
